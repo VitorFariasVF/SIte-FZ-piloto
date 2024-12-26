@@ -1,3 +1,5 @@
+console.log("okok")
+
 const config = {
     quantidadeServicos: 6, // Quantidade de caixas de serviços
     opacidadeHover: 0.9 // Opacidade dos itens ao passar o mouse
