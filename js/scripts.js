@@ -1,8 +1,8 @@
-console.log("okok")
+document.addEventListener('DOMContentLoaded', criarServicos);
 
 const config = {
-    quantidadeServicos: 6, // Quantidade de caixas de serviços
-    opacidadeHover: 0.9 // Opacidade dos itens ao passar o mouse
+    quantidadeServicos: 6,
+    opacidadeHover: 0.9
 };
 
 const servicos = [
@@ -13,10 +13,10 @@ const servicos = [
 
 function criarServicos() {
     const servicesContainer = document.querySelector('.service-container');
-    servicesContainer.innerHTML = ''; // Reseta o conteúdo
+    servicesContainer.innerHTML = '';
 
     for (let i = 0; i < config.quantidadeServicos; i++) {
-        const servico = servicos[i % servicos.length]; // Reutiliza serviços se necessário
+        const servico = servicos[i % servicos.length];
         const service = document.createElement('div');
         service.className = 'service';
         service.dataset.index = i;
@@ -94,6 +94,3 @@ function voltarSobreNos() {
     document.getElementById('about-us').style.display = 'none';
     document.getElementById('services').style.display = 'block';
 }
-
-// Cria os serviços ao carregar a página
-document.addEventListener('DOMContentLoaded', criarServicos);
