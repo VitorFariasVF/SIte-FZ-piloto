@@ -1,0 +1,141 @@
+:root {
+    --fonte-principal: Arial, sans-serif;
+    --cor-fundo: linear-gradient(to bottom, #000000, #4d4d4d);
+    --cor-texto: #ffffff;
+    --cor-servico-fundo: #4d4d4d;
+    --cor-footer-fundo: #4CAF50;
+    --cor-footer-borda: #fff;
+    --cor-indicador: #fff;
+    --cor-indicador-ativo: #4CAF50;
+    --cor-botao: #4CAF50;
+    --cor-botao-hover: #45a049;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 0;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header .intro h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header .intro p {
+    font-size: 1.2em;
+}
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background: var(--cor-servico-fundo);
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service:hover {
+    transform: scale(1.02);
+}
+
+.service-details {
+    display: none;
+    padding: 50px 20px;
+    background: var(--cor-servico-fundo);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.toolbar button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background: var(--cor-botao);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--cor-botao);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.info-container>div {
+    width: 45%;
+}
+
+.footer {
+    background: var(--cor-footer-fundo);
+    color: var(--cor-texto);
+    padding: 20px 0;
+    border-top: 1px solid var(--cor-footer-borda);
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
