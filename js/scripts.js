@@ -13,10 +13,10 @@ const servicos = [
 
 function criarServicos() {
     const servicesContainer = document.querySelector('.service-container');
-    servicesContainer.innerHTML = '';
+    servicesContainer.innerHTML = ''; // Reseta o conteúdo
 
     for (let i = 0; i < config.quantidadeServicos; i++) {
-        const servico = servicos[i % servicos.length];
+        const servico = servicos[i % servicos.length]; // Reutiliza serviços se necessário
         const service = document.createElement('div');
         service.className = 'service';
         service.dataset.index = i;
@@ -81,8 +81,10 @@ function mostrarDetalhes(index) {
 }
 
 function voltar() {
-    document.getElementById('service-details').style.display = 'none';
-    document.getElementById('services').style.display = 'block';
+    const serviceDetails = document.getElementById('service-details');
+    const services = document.getElementById('services');
+    serviceDetails.style.display = 'none';
+    services.style.display = 'block';
 }
 
 function mostrarSobreNos() {
