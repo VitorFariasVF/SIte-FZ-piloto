@@ -10,10 +10,6 @@
         width: 100%;
         text-align: center;
     }
-
-    .toolbar button {
-        margin: 5px 5px;
-    }
 }
 
 /* Estilos para celulares */
@@ -29,7 +25,8 @@
         text-align: center;
     }
 
-    .toolbar button {
-        margin: 2px 5px;
+    .history,
+    .portfolio {
+        padding: 20px;
     }
 }
